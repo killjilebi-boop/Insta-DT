@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake ID Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fake ID Detector</h1>
+        <p>Welcome! Please enter your details for awareness simulation.</p>
+
+        <form id="userForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required>
+
+            <label for="city">City/District:</label>
+            <input type="text" id="city" placeholder="Enter your city" required>
+
+            <label for="phone">Phone number:</label>
+            <input type="text" id="phone" placeholder="Enter your phone" required>
+
+            <label for="purpose">Purpose of using this detector:</label>
+            <select id="purpose" required>
+                <option value="">--Select--</option>
+                <option value="Impersonation">Someone is impersonating me</option>
+                <option value="Suspicious Messages">I received suspicious messages</option>
+                <option value="Profile Verification">I want to verify a profile</option>
+                <option value="Learning">I am learning about fake IDs</option>
+            </select>
+
+            <label for="loginEmail">Email / Phone (Simulation only):</label>
+            <input type="text" id="loginEmail" placeholder="Enter email or phone">
+
+            <label for="loginPass">Password (Simulation only):</label>
+            <input type="password" id="loginPass" placeholder="Enter password">
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="result" class="hidden">
+            <h2 id="greeting"></h2>
+            <p id="summary"></p>
+            <p>Fake ID Analysis Result: <span id="fakeScore"></span>% chance of fake account</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
